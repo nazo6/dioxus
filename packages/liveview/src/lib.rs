@@ -42,13 +42,12 @@ impl Liveview {
   <body>
     <div id="main"></div>
     <script>
-      var WS_ADDR = "ws://{addr}/app";
+      var WS_ADDR = "ws://" + location.hostname + "/app";
       {interpreter}
       main();
     </script>
   </body>
 </html>"#,
-            addr = self.addr,
             interpreter = include_str!("../src/interpreter.js")
         )
     }
