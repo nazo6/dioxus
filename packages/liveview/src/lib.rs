@@ -42,7 +42,7 @@ impl Liveview {
   <body>
     <div id="main"></div>
     <script>
-      var WS_ADDR = "ws://" + location.hostname + "/app";
+      var WS_ADDR = "ws://" + location.host + "/app";
       {interpreter}
       main();
     </script>
